@@ -1,0 +1,64 @@
+<!--
+Equipe:
+Ana Lys Alves da Silva 
+Maria Eduarda de Lima Viana
+Sillas Emanoel Pessoa França
+-->
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regra de Cramer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Regra de Cramer</h1>
+        <p>
+          Resolva um sistema linear n×n e veja cada determinante calculado passo
+          a passo.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="titulo-sistema">
+        <h2 id="titulo-sistema">Seu sistema</h2>
+
+        <fieldset class="size">
+          <legend>Número de incógnitas</legend>
+          <label><input type="radio" name="n" value="2" /><span>2</span></label>
+          <label
+            ><input type="radio" name="n" value="3" checked /><span
+              >3</span
+            ></label
+          >
+          <label><input type="radio" name="n" value="4" /><span>4</span></label>
+          <label><input type="radio" name="n" value="5" /><span>5</span></label>
+        </fieldset>
+
+        <div
+          id="editor"
+          class="editor"
+          role="group"
+          aria-label="Coeficientes do sistema"
+        ></div>
+        <p class="hint">
+          Aceita inteiros, decimais (1,5) e frações (3/4). Para coeficientes
+          negativos, digite o sinal de menos.
+        </p>
+
+        <div class="actions">
+          <button type="button" id="example">Carregar exemplo</button>
+          <button type="button" id="clear" class="ghost">Limpar</button>
+        </div>
+      </section>
+
+      <section id="result" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
